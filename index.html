@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <title>La Cumbrecita Village - Un lugar para disfrutar de la naturaleza</title>
@@ -44,7 +44,7 @@
               <div class="intro">
                 <div class="intro--banner">
                   <h1>Conectate<br>con la <br> naturaleza</h1>
-                  <button class="cta">Reservá
+                  <button class="cta">Ver Imágenes
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118"
                       style="enable-background:new 0 0 150 118;" xml:space="preserve">
@@ -88,7 +88,8 @@
                           <img src="assets/img/cabana-habitacion.jpg" alt="Cabaña en La Cumbrecita">
                         </div>
                         <p class="slider--item-title">Cabaña de 5/6 personas</p>
-                        <p class="slider--item-description">Cabañas individuales compuestas por cocina completa,
+                       
+                        <p class="slider--item-description"> <a class="btn--vermas" id="btn--vermas--cabana">Ver más</a> <br><br>Cabañas individuales compuestas por cocina completa,
                           comedor, sala de estar, tv con directv satelital, baño y en planta alta dos dormitorios. WiFi.
                         </p>
                       </a>
@@ -99,7 +100,7 @@
                           <img src="assets/img/loft.png" alt="Loft en La Cumbrecita">
                         </div>
                         <p class="slider--item-title">Loft para 2/3 personas</p>
-                        <p class="slider--item-description">Loft compuesto por cocina completa comedor y baño en planta
+                        <p class="slider--item-description"><a class="btn--vermas" id="btn--vermas--loft">Ver más</a> <br><br>Loft compuesto por cocina completa comedor y baño en planta
                           baja y en planta alta dormitorio con tv pantalla plana con directv satelital y aire
                           acondicionado. Los Loft poseen calefacción por tiro balanceado. El complejo tiene Wi-Fi.</p>
                       </a>
@@ -110,7 +111,7 @@
                           <img src="assets/img/apart.png" alt="Apart">
                         </div>
                         <p class="slider--item-title">Apart para 2 personas</p>
-                        <p class="slider--item-description">Apart con cama matrimonial, aire acondicionado, tv con
+                        <p class="slider--item-description"><a class="btn--vermas" id="btn--vermas--apart">Ver más</a> <br><br>Apart con cama matrimonial, aire acondicionado, tv con
                           Directv satelital, frigobar, pava eléctrica y baño individual con ducha. Balcón con deck y
                           vista a las lagunas. No posee cocina ni vajilla.</p>
                       </a>
@@ -144,7 +145,7 @@
               <div class="about">
                 <div class="about--banner">
                   <h2>La naturaleza <br>nos caracteriza</h2>
-                  <a href="#0">Sobre Nosotros
+                  <a href="#0" id="sobre--nosotros">Sobre Nosotros
                     <span>
                       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118"
@@ -156,18 +157,10 @@
                       </svg>
                     </span>
                   </a>
-                  <img src="assets/img/about-visual.png" alt="About Us">
+                  <img src="https://lacumbrecita.gob.ar/adm/wp-content/uploads/2021/07/village-01.jpg" alt="About Us">
                 </div>
                 <div class="about--options">
-                  <a href="#0">
-                    <h3>Misión</h3>
-                  </a>
-                  <a href="#0">
-                    <h3>Visión</h3>
-                  </a>
-                  <a href="#0">
-                    <h3>Historia</h3>
-                  </a>
+                  
                 </div>
               </div>
             </li>
@@ -375,7 +368,8 @@
       <li>Galería</li>
     </ul>
   </div>
-
+  
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
@@ -419,7 +413,7 @@
     <div style="background-image: url(https://lh3.googleusercontent.com/p/AF1QipM7g7dvCgZVSImSVDeMbrHrSykquq8vmGWFxnIn=s1360-w1360-h1020);>
       <h2>Slide 3</h2>
     </div>
-    <div style="background-image: url(https://lh3.googleusercontent.com/p/AF1QipNC8W7VMUOFX0b8gHlV7GhBx-usvlE25Yn_17C-=s1360-w1360-h1020);">
+    <div style="background-image: url(https://lh3.googleusercontent.com/p/AF1QipODfSpgQRfS19oeunGQw7VhPAw3lle_f-lIS9sk=s1360-w1360-h1020);">
       <h2>Slide 4</h2>
     </div>
   </div>
@@ -468,6 +462,106 @@
       $(".option").removeClass("active");
       $(this).addClass("active");
 
+    });
+
+    document.querySelector('#btn--vermas--cabana').addEventListener('click', function (e) {
+      e.preventDefault();
+      Swal.fire({
+        title: 'Información de las Cabañas',
+        html: `
+          <p>Cabañas para 5/6 personas con todas las comodidades</p>
+          <ul class="two-column-list">
+            <li>Cocina completa</li>
+            <li>Comedor</li>
+            <li>Sala de estar</li>
+            <li>TV con Directv satelital</li>
+            <li>Baño</li>
+            <li>Dos dormitorios en planta alta</li>
+            <li>WiFi</li>
+          </ul>
+          <div class="grid-gallery">
+            <img src="assets/img/afuera-cabana.jpg" alt="Afuera de Cabaña">
+            <video src="assets/img/cabana-video.mp4" autoplay loop></video>
+            <img src="assets/img/estacionamiento.jpg" alt="Cabaña Habitación">
+            <img src="assets/img/juegos-ninos.jpg" alt="Juegos Niños">
+          </div>
+        `,
+        showCloseButton: true,
+        showCancelButton: false,
+        focusConfirm: false,
+        confirmButtonText: 'Cerrar',
+        customClass: {
+          confirmButton: 'custom-confirm-button',
+          popup: 'custom-swal-container-cabanas'
+        }
+      });
+    });
+
+    document.querySelector('#btn--vermas--loft').addEventListener('click', function (e) {
+      e.preventDefault();
+      Swal.fire({
+        title: 'Información de nuestros Loft',
+        html: `
+          <p>Loft para 2/3 personas con todas las comodidades</p>
+          <ul class="two-column-list">
+            <li>Cocina completa</li>
+            <li>Comedor</li>
+            <li>Calefacción Tiro Balanceado</li>
+            <li>TV con Directv satelital</li>
+            <li>Baño</li>
+            <li>Dormitorio en planta alta</li>
+            <li>WiFi</li>
+          </ul>
+          <div class="grid-gallery">
+            <img src="assets/img/loft-bano.jpg" alt="Loft Baño">
+            <img src="assets/img/loft-cocina.jpg" alt="Loft Cocina">
+            <img src="assets/img/loft-comedor.jpg" alt="Loft Comedor">
+            <img src="assets/img/loft-habitacion.jpg" alt="Loft Habitación">
+          </div>
+        `,
+        showCloseButton: true,
+        showCancelButton: false,
+        focusConfirm: false,
+        confirmButtonText: 'Cerrar',
+        customClass: {
+          confirmButton: 'custom-confirm-button',
+          popup: 'custom-swal-container-cabanas'
+        }
+      });
+    });
+
+
+    document.querySelector('#btn--vermas--apart').addEventListener('click', function (e) {
+      e.preventDefault();
+      Swal.fire({
+        title: 'Información de los Aparts',
+        html: `
+          <p>Aparts para 2 personas con todas las comodidades</p>
+          <ul class="two-column-list">
+            <li>Cocina completa</li>
+            <li>Comedor</li>
+            <li>Sala de estar</li>
+            <li>TV con Directv satelital</li>
+            <li>Baño</li>
+            <li>Dos dormitorios en planta alta</li>
+            <li>WiFi</li>
+          </ul>
+          <div class="grid-gallery">
+            <img src="assets/img/apart-balcon.jpg" alt="Apart Balcón">
+            <img src="assets/img/apart-habitacion.jpg" alt="Apart Habitación">
+            <img src="assets/img/apart-bano.jpg" alt="Apart Baño">
+            <img src="assets/img/apart-entrada.jpg" alt="Apart entrada">
+          </div>
+        `,
+        showCloseButton: true,
+        showCancelButton: false,
+        focusConfirm: false,
+        confirmButtonText: 'Cerrar',
+        customClass: {
+          confirmButton: 'custom-confirm-button',
+          popup: 'custom-swal-container-cabanas'
+        }
+      });
     });
   </script>
   <script src="assets/js/functions-min.js"></script>

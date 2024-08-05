@@ -2728,7 +2728,9 @@ h3 {
     .two-columns-nosotros {
         flex-direction: column;
     }
-
+    .whatsapp-text {
+      display: none;
+    }
     .custom-swal-container-cabanas {
         width: 100%;
     }

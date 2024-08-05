@@ -516,10 +516,9 @@ body {
     color: #fff;
 }
 
-#logolcv {
-    width: 90px;
-    height: 90px;
-    color: #fff !important;
+#logo {
+    height: 50px;
+    
 }
 
 .header--logo p {

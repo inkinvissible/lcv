@@ -2723,28 +2723,7 @@ h3 {
     margin-top: 0;
 }
 
-/* Para dispositivos móviles */
-@media (max-width: 768px) {
-    .two-columns-nosotros {
-        flex-direction: column;
-    }
-    .whatsapp-text {
-      display: none;
-    }
-    .custom-swal-container-cabanas {
-        width: 100%;
-    }
 
-    .two-column-list {
-        columns: 1;
-        -webkit-columns: 1;
-        -moz-columns: 1;
-    }
-
-    .grid-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
 @media (max-width: 1024px) {
     .grid-gallery {
@@ -2842,4 +2821,30 @@ h3 {
     width: 24px;
     height: 24px;
     margin-right: 10px;
+}
+/* Para dispositivos móviles */
+@media (max-width: 768px) {
+    .two-columns-nosotros {
+        flex-direction: column;
+    }
+    .whatsapp-text {
+      display: none;
+    }
+    .whatsapp-logo {
+    
+    margin-right: 0px;
+}
+    .custom-swal-container-cabanas {
+        width: 100%;
+    }
+
+    .two-column-list {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+
+    .grid-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

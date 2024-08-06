@@ -2848,3 +2848,7 @@ h3 {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+#open-gallery{
+    width: 70%;
+    height: 100%;
+}

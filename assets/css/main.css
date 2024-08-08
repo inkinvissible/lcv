@@ -2244,13 +2244,13 @@ body {
 }
 
 body.dark {
-    background: #232223;
+    background: #606731;
     color: white;
 }
 
 @media (prefers-color-scheme: dark) {
     body:not(.light) {
-        background: #232223;
+        background: #606731;
         color: white;
     }
 }

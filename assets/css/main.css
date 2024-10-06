@@ -2852,16 +2852,20 @@ h3 {
     width: 70%;
     height: 100%;
 }
-.grid-gallery-cabanas{
+.grid-gallery-cabanas {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 1em 1em;
-   
+    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas de igual tamaño */
+    grid-template-rows: 1fr 1fr 1fr;    /* Tres filas de igual tamaño */
+    gap: 1em;                           /* Espaciado uniforme */
     grid-template-areas:
-      "img1 video img2"
-      "img3 video img4";
+        "img1 video img2"
+        "img3 video img4"
+        "img5 img6 img7";               /* Distribución precisa del grid */
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;               /* Asegura que los elementos se ajusten verticalmente */
+    justify-items: stretch;             /* Asegura que los elementos se ajusten horizontalmente */
 }
 
 .video { grid-area: video; }
@@ -2888,14 +2892,33 @@ h3 {
 .img4{
     height: 100%; width: 100%; object-fit: cover;
 }
+.img5 {
+    grid-area: img5;
+    height: 100%; width: 100%; object-fit: cover;
+}
+
+.img6 {
+    grid-area: img6;
+    height: 100%; width: 100%; object-fit: cover;
+}
+
+.img7 {
+    grid-area: img7;
+    height: 100%; width: 100%; object-fit: cover;
+}
 @media (max-width: 1024px) {
     .grid-gallery-cabanas {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(3, 1fr);
         grid-template-areas:
-          "img1 video"
-          "img2 img3"
-          "img4 img4";
+          "video video"
+          "img1 img1"
+          "img2 img2"
+          "img3 img3"
+          "img4 img4"
+          "img5 img5"
+          "img6 img6"
+          "img7 img7";
     }
 }
 
@@ -2908,6 +2931,9 @@ h3 {
           "img1"
           "img2"
           "img3"
-          "img4";
+          "img4"
+          "img5"
+          "img6"
+          "img7";
     }
 }

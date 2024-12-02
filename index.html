@@ -604,14 +604,16 @@ Check out 10:00 HS
         setTimeout(function() {
             Swal.fire({
                 title: '¡Te damos la bienvenida!',
-                imageUrl: 'https://lacumbrecitavillage.com.ar/assets/img/promo.jpg', // URL de la imagen que quieras mostrar
+                imageUrl: 'https://lacumbrecitavillage.com.ar/assets/img/promo.jpg',
+                text: 'Tenemos esta promo para vos y para que aproveches', // URL de la imagen que quieras mostrar
                 imageWidth: 500,
                 imageHeight: 500,
                 imageAlt: 'Imagen de la promoción de Bancor',
                 showConfirmButton: false, // No mostrar el botón de confirmación
                 showCancelButton: false, // No mostrar el botón de cancelar
                 allowOutsideClick: true, // No cerrar el popup al hacer clic fuera
-                allowEscapeKey: true, // No cerrar el popup con la tecla de escape
+                allowEscapeKey: true,
+                showCloseButton: true, // No cerrar el popup con la tecla de escape
                 customClass: {
                     popup: 'custom-popup', // Añadir clases personalizadas si es necesario
                 }
